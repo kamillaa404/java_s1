@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<VBox spacing="10" alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="org.example.demo.TachesController">    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Gestion des Tâches" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    </HBox>
+
+    <GridPane vgap="10" hgap="10">
+        <Label text="Titre:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="titreField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextArea fx:id="descriptionArea" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Date Limite:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <DatePicker fx:id="dateLimitePicker" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Priorité:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <ComboBox fx:id="prioriteCombo" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="BASSE" />
+                    <String fx:value="MOYENNE" />
+                    <String fx:value="URGENT" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <Label text="Catégorie:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <ComboBox fx:id="categorieCombo" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="DEVELOPPEMENT" />
+                    <String fx:value="DESIGN" />
+                    <String fx:value="TEST" />
+                    <String fx:value="AUTRE" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <Label text="Statut:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        <ComboBox fx:id="statusCombo" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="À FAIRE" />
+                    <String fx:value="EN COURS" />
+                    <String fx:value="TERMINÉ" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+    </GridPane>
+
+    <VBox spacing="5">
+        <Label text="Employés assignés:"/>
+        <ListView fx:id="employesListView" VBox.vgrow="ALWAYS" prefHeight="150"/>
+    </VBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Ajouter" onAction="#handleAjouter"/>
+        <Button text="Modifier" onAction="#handleModifier"/>
+        <Button text="Supprimer" onAction="#handleSupprimer"/>
+    </HBox>
+
+    <TableView fx:id="tachesTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID"/>
+            <TableColumn fx:id="titreColumn" text="Titre"/>
+            <TableColumn fx:id="descriptionColumn" text="Description"/>
+            <TableColumn fx:id="dateLimiteColumn" text="Date Limite"/>
+            <TableColumn fx:id="prioriteColumn" text="Priorité"/>
+            <TableColumn fx:id="statusColumn" text="Statut"/>
+        </columns>
+    </TableView>
+</VBox>

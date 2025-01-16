@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+
+<TabPane xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="org.example.demo.KanbanCalendarController">
+    <tabs>
+        <Tab text="Kanban">
+            <content>
+                <VBox fx:id="kanbanContainer"/>
+            </content>
+        </Tab>
+        <Tab text="Calendar">
+            <content>
+                <VBox fx:id="calendarContainer"/>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

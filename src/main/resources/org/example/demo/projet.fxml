@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.demo.ProjetController">
+    <children>
+        <Label alignment="TOP_CENTER" styleClass="title" text="Gestion des Projets">
+            <font>
+                <Font name="System Bold" size="35.0"/>
+            </font>
+        </Label>
+
+        <HBox alignment="CENTER" spacing="10">
+            <Button fx:id="btnAjouter" text="Ajouter Projet" onAction="#openAjouterProjet"/>
+            <Button fx:id="btnModifier" text="Modifier Projet" onAction="#openModifierProjet"/>
+            <Button fx:id="btnSupprimer" text="Supprimer Projet" onAction="#supprimerProjet"/>
+        </HBox>
+
+        <Label fx:id="messageLabel" textFill="RED"/>
+
+        <TableView fx:id="tableViewProjets" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colonneNom" text="Nom"/>
+                <TableColumn fx:id="colonneDescription" text="Description"/>
+                <TableColumn fx:id="colonneDateDebut" text="Date Début"/>
+                <TableColumn fx:id="colonneDateLimite" text="Date Limite"/>
+                <TableColumn fx:id="colonneStatus" text="Status"/>
+                <TableColumn fx:id="colonneEmployes" text="Employés Assignés"/>
+            </columns>
+        </TableView>
+    </children>
+    <padding>
+        <javafx.geometry.Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+</VBox>

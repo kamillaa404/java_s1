@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.demo.ModifierProjet">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    <children>
+        <GridPane vgap="10" hgap="10">
+            <Label text="Nom du projet:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="nomField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Description:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextArea fx:id="descriptionField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Date de début:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="dateDebutPicker" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Date limite:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="dateLimitePicker" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <Label text="Status:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="statusComboBox" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+            <Label text="Employés assignés:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <ListView fx:id="employesListView" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <Button text="Annuler" onAction="#annuler"/>
+            <Button text="Sauvegarder" onAction="#sauvegarder"/>
+        </HBox>
+
+        <Label fx:id="messageLabel" textFill="RED"/>
+    </children>
+</VBox>

@@ -18,12 +18,15 @@ public class Accueil {
     public Button boutton_projet;
     @FXML
     public Button boutton_calendrier;
+    @FXML
+    public Button boutton_taches;
 
     @FXML
     private void initialize() {
         boutton_employe.setOnAction(e -> openPage("/org/example/demo/employe.fxml", "Gestion des Employés"));
         boutton_projet.setOnAction(e -> openPage("/org/example/demo/projet.fxml", "Gestion des Projets"));
         boutton_calendrier.setOnAction(e -> openPage("/org/example/demo/kanbancontroller.fxml", "Calendrier"));
+        boutton_taches.setOnAction(e -> openPage("/org/example/demo/taches.fxml", "Gestion des Tâches"));
     }
 
     private void openPage(String fxmlPath, String title) {
@@ -56,6 +59,7 @@ public class Accueil {
     public void openEmploye() {
         openPage("/org/example/demo/employe.fxml", "Gestion des Employés");
     }
+
     @FXML
     public void openCalendrier() {
         try {

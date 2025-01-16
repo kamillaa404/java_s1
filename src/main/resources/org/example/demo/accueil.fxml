@@ -23,7 +23,6 @@
                 <Font name="Arial" size="19.0" />
             </font>
             <graphic>
-
             </graphic>
         </Button>
         <Button fx:id="boutton_calendrier" alignment="CENTER" contentDisplay="RIGHT" layoutX="596.0" layoutY="280.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="231.0" text="Kanban">
@@ -33,6 +32,13 @@
             <graphic>
             </graphic>
         </Button>
-      <Label layoutX="518.0" layoutY="548.0" prefHeight="42.0" prefWidth="349.0" text="Projet réalisé par Ornela GASHI et Kamilla VAISOVA, Java 2025" />
+        <Button fx:id="boutton_taches" alignment="CENTER" contentDisplay="BOTTOM" graphicTextGap="40.0" layoutX="305.0" layoutY="380.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="244.0" text="Tâches">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+            <graphic>
+            </graphic>
+        </Button>
+        <Label layoutX="518.0" layoutY="548.0" prefHeight="42.0" prefWidth="349.0" text="Projet réalisé par Ornela GASHI et Kamilla VAISOVA, Java 2025" />
     </children>
 </AnchorPane>

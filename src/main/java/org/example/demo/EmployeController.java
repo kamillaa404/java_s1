@@ -45,7 +45,6 @@ public class EmployeController {
     }
 
     private void loadEmployees() {
-        // TODO: Replace with actual database loading
         employes.add(new Employe(1, "Dupont", "Jean", "Développeur"));
         employes.add(new Employe(2, "Martin", "Marie", "Designer"));
         listViewEmployes.setItems(employes);
